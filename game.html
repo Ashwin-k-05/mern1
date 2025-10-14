@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><b>Stone,Paper,Scissor</b></h2>
+    <br><br>
+    <button onclick="game('stone')">Stone</button>
+    <button onclick="game('paper')">Paper</button>
+    <button onclick="game('scissor')">Scissor</button>
+    <br><br>
+    <h2 id="playerchoice"></h2>
+    <h2 id="computerchoice"></h2>
+    <h3 id="result"></h3>
+    <script>
+        const choices=["stone","paper","scissor"];
+        function game(user){
+
+            const randomIndex=Math.floor(Math.random()*3);
+            const computer=choices[randomIndex];
+        
+        if (user === computer) {
+            alert( "It's a tie!");
+        } else if (
+            (user === "stone" && computer === "scissor") ||
+            (user === "paper" && computer === "stone") ||
+            (user === "scissor" && computer === "paper")
+        ) {
+            alert( "You win!" );
+        } else {
+            alert( "Computer wins!");
+        }
+    }
+    </script>
+</body>
+</html>
