@@ -39,3 +39,4 @@ const[one,,two]=arr2;
 console.log(two);
 const[tree,...bee]=arr2;
 console.log(bee)
+console.log(23)
